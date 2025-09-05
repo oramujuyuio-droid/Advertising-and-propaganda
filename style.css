@@ -1,0 +1,267 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto
+}
+
+/* الرأس */
+header {
+    background-color: #0D47A1;
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #FFC107;
+}
+
+/* الأزرار */
+.btn {
+    background-color: #FFC107;
+    color: #0D47A1;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffb300;
+}
+
+/* hero */
+.hero {
+    background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* الكارد العام */
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    background-color: white;
+    padding: 15px;
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+.card img {
+    width: 150px;
+    display: block;
+    transition: transform 0.5s ease;
+    border-radius: 10px;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 71, 161, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding: 20px;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.card .overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card .overlay p {
+    font-size: 1rem;
+}
+
+/* fadeInUp animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* .container img{
+    width: 180px;
+    padding: 10px;
+    display: flexbox;
+} */
+     .portfolio-page .container .portfolio-items .item img{
+      display: flex;          /* العناصر تبقى جنب بعض */
+      justify-content: center; /* في النص أفقياً */
+      gap: 15px;              /* مسافة بين العناصر */
+      margin-top: 50px;
+      width: 180px;
+    }
+    .contact-page a{
+        padding: 10px;
+        margin: 10px;
+    }
+    .contact-page p{
+         padding: 10px;
+        margin: 10px;
+    }
+
+.about-cards .card:nth-child(1),
+.service-cards .card:nth-child(1),
+.portfolio-items .item:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.about-cards .card:nth-child(2),
+.service-cards .card:nth-child(2),
+.portfolio-items .item:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.about-cards .card:nth-child(3),
+.service-cards .card:nth-child(3),
+.portfolio-items .item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.portfolio-items .item:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+/* الأقسام */
+.about-cards,
+.service-cards
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+
+}
+
+/* contact form */
+.contact-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-page input,
+.contact-page textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact-page button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0D47A1;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-page button:hover {
+    background-color: #FFC107;
+    color: #0D47A1;
+}
+
+/* footer */
+footer {
+    background-color: #0D47A1;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+/* استجابة الموبايل */
+@media (max-width: 768px) {
+
+    .about-cards,
+    .service-cards,
+    .portfolio-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}

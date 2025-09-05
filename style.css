@@ -150,11 +150,11 @@ header nav ul li a:hover {
         transform: translateY(0);
     }
 }
-/* .container img{
+.container img{
     width: 180px;
     padding: 10px;
     display: flexbox;
-} */
+} 
      .portfolio-page .container .portfolio-items .item img{
       display: flex;          /* العناصر تبقى جنب بعض */
       justify-content: center; /* في النص أفقياً */
